@@ -4,7 +4,7 @@ from django.db import models
 
 # model for members
 class Member(models.Model):
-    member_name = models.CharField(max_length=200, unique=True)
+    member_name = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
         return str(self.member_name)
@@ -12,8 +12,8 @@ class Member(models.Model):
 #user details model
 class Detail(models.Model):
     id_name = models.IntegerField(unique=True)
-    real_name = models.CharField(max_length=1000)
-    tz = models.CharField(max_length=10)
+    real_name = models.CharField(max_length=100)
+    tz = models.CharField(max_length=100)
     activity_peroid = models.ForeignKey(Member, related_name='member_activity', on_delete=models.CASCADE, null=True)
 
 
