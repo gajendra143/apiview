@@ -11,14 +11,14 @@ class Member(models.Model):
 
 #user details model
 class Detail(models.Model):
-    id_name = models.IntegerField(unique=True)
+    id_number = models.IntegerField(unique=True)
     real_name = models.CharField(max_length=100)
     tz = models.CharField(max_length=100)
     activity_peroid = models.ForeignKey(Member, related_name='member_activity', on_delete=models.CASCADE, null=True)
 
 
     def __str__(self):
-        return str(self.real_name)
+        return str(self.activity_peroid)
 
 # user activity model
 class Activity(models.Model):

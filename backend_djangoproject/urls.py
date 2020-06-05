@@ -19,7 +19,7 @@ from core.views import GenericAPIView, detailGenericAPIView, activityGenericAPIV
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('generic/member', GenericAPIView.as_view()),
+    path('', GenericAPIView.as_view()),
     path('generic/detail', detailGenericAPIView.as_view()),
     path('generic/activity', activityGenericAPIView.as_view()),
 
